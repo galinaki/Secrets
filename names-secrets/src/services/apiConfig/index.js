@@ -12,4 +12,13 @@ const api = axios.create({
   }
 })
 
-export default api
+// export default api
+
+export const getNames = async () => {
+  try {
+    const res = await api.get()
+    return res.data.records
+  } catch (error) {
+    throw error
+  }
+}

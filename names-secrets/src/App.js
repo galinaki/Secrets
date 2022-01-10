@@ -3,22 +3,19 @@ import NamesList from "./components/NamesList"
 import NamesDetails from "./components/NamesDetails"
 import Form from "./components/Form"
 import './App.css';
+import Navbar from './components/Navbar';
+import Home from './components/Home';
 
 function App() {
   return (
     <div className="App">
       <h1>Name's secrets</h1>
-      <h6>Navbar: Home, Names list, Add a name, Famouse names </h6>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+      <Navbar />
       <br />
       <br />
       <br/>
       <Routes>
-        <Route path="/" element={<h4>Home page text</h4>} />  
+        <Route path="/" element={<Home />} />  
         <Route path="/names" element={<NamesList />} />
         <Route path="/names/:id" element={<NamesDetails />} />
         <Route path="/new" element={<Form />} />

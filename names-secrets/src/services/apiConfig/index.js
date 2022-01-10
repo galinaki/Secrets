@@ -28,15 +28,24 @@ export const getNames = async () => {
 
 
 
-export const getNamesDetails = async (id) => {
+export const getNamesDetails = async () => {
   
   
   try {
-    const res = await api.get(id)
-    // console.log(res)
-    return res.data.records
+    const res = await api.get()
+    console.log(res.data.records[0])
+    return res.data.records[0]
     
   } catch (error) {
     throw error
   }
 }
+
+export const addNewName = async (fields) => {
+  try {
+    await api.post("", { fields })
+    return true
+  } catch (error) {
+    throw error
+  }
+} 

@@ -1,43 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Buda:wght@300&display=swap");
+
 body {
+  font-family: "Buda", cursive;
   text-align: center;
   /* background-image: url("https://c4.wallpaperflare.com/wallpaper/927/454/476/book-magic-glamour-spirituality-wallpaper-preview.jpg"); */
   background-image: url("https://images.unsplash.com/photo-1523681504355-8b4860f99a58?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHNvdWx8ZW58MHx8MHx8&w=1000&q=80");
   background-size: cover;
-
-  background-color: blue;
+  background-position: center;
+  background-attachment: fixed;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  text-decoration: none;
+  font-size: 36px;
+  list-style-type: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nameList {
+  /* border: 2px solid pink; */
+  background-color: rgb(233, 150, 122, 0.2);
+  border-radius: 30px;
+  text-decoration: none;
+  text-shadow: lemonchiffon;
+  text-decoration-style: none;
+  color: inherit;
+  width: 150px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.linkNameList {
+  text-decoration: none;
+  color: darkred;
+  text-shadow: 10px 5px 10px rgb(78, 5, 5);
+}
+.linkList:hover {
+  color: rgb(219, 25, 90);
+  zoom: 120%;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: bolder;
+  /* credit https://www.sliderrevolution.com/resources/css-text-animation/ */
+  background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+  background-size: cover;
+  color: transparent;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+  font-size: 60px;
+  line-height: 1;
+  margin: 10px 0;
+}
+
+.navbarList {
+  text-decoration: none;
+  color: dimgray;
+  font-size: 28px;
+}
+.navbar {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  flex-wrap: nowrap;
+  align-items: flex-start;
 }

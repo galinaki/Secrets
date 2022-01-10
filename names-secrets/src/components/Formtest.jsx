@@ -1,6 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { addNewName } from '../services/apiConfig'
-import { useState } from 'react'
 
 export default function Form() {
   const [newName, setNewName] = useState({
@@ -23,29 +22,24 @@ export default function Form() {
       [id]: value
     }))
   }
+
   return (
     <div>
-      <h1> form here</h1>
+      <h1>Add a new name</h1>
       <form onSubmit={handleSubmit}>
-        <label>Name</label>
-        <input type="text" placeholder='type name'
-        value={newName.name} id="name"
-        onChange={handleInput} />
-        <br />
+        <label>Name </label>
+        <input type="text" placeholder='input name'
+          value={newName.name} id="name"
+        onChange={handleInput}/>
         <label>Pronunciation </label>
-        <input type="text" placeholder='how to pronunce?' 
-        value={newName.pronunciation} id='pronunciation'
-        onChange={handleInput} />
-        <br />
-        {/* <label>Meaning </label>
+        <input type="text" placeholder='how to pronunce?'
+        onChange={handleInput}/>
+        <label>Meaning </label>
         <input type="text" placeholder='what is name meaning?'
-        onChange={handleInput} />
-        <br />
+        onChange={handleInput}/>
         <label>History of name </label>
         <input type="text" placeholder='little bit of history'
-        onChange={handleInput} /> */}
-        <br />
-        <br />
+        onChange={handleInput}/>
         <button>Submit</button>
       </form>
     </div>

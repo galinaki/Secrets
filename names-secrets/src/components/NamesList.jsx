@@ -16,12 +16,12 @@ export default function NamesList() {
 
   return (
     <div>
-      <h1>Names List is here</h1>
-        <ul>
+      <h1>Choose name</h1>
+        <ul class="list">
           {names.map((name) => {
             return (
-              <li key={name.id}>
-                <Link  to={`/names/${name.id}`}>
+              <li key={name.id} className='nameList'>
+                <Link className='linkNameList' to={`/names/${name.id}`}>
                   {name.fields.name}
                 </Link>
               </li>

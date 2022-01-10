@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom'
 import { getNamesDetails } from '../services/apiConfig'
 
 export default function NamesDetails() {
-  const [name, setName] = useState([])
+  const [name, setName] = useState({})
   const {id} = useParams()
 
   useEffect(() => {
@@ -25,7 +25,7 @@ export default function NamesDetails() {
 
   return (
     <div>
-      <h1>{name.fields?.id}</h1>
+      <h1>{name.id}</h1>
       <h1>{name.fields?.name}</h1>
     </div>
   )

@@ -36,9 +36,9 @@ body {
   color: darkred;
   text-shadow: 10px 5px 10px rgb(78, 5, 5);
 }
-.linkList:hover {
+.linkNameList:hover {
   color: rgb(219, 25, 90);
-  zoom: 120%;
+  zoom: 105%;
 }
 
 h1 {
@@ -61,9 +61,18 @@ h1 {
   color: dimgray;
   font-size: 28px;
 }
+.navbarList:hover {
+  color: darkslategrey;
+}
 .navbar {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   align-items: flex-start;
+}
+
+#copyright {
+  position: fixed;
+  bottom: 0;
+  left: 0;
 }

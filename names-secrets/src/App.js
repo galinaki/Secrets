@@ -5,6 +5,7 @@ import Form from "./components/Form"
 import './App.css';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
       <br />
       <br />
       <br />
+      <Footer />
     </div>
   );
 }

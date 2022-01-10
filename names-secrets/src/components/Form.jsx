@@ -25,7 +25,7 @@ export default function Form() {
   }
   return (
     <div>
-      <h1> form here</h1>
+      <h2> form here</h2>
       <form onSubmit={handleSubmit}>
         <label>Name</label>
         <input type="text" placeholder='type name'

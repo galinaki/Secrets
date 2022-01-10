@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { getNames } from '../services/apiConfig'
 
 export default function NamesList() {
@@ -20,7 +21,9 @@ export default function NamesList() {
           {names.map((name) => {
             return (
               <li key={name.id}>
-                {name.fields.name}
+                <Link  to={`/names/${name.id}`}>
+                  {name.fields.name}
+                </Link>
               </li>
             )
           })}

@@ -3,6 +3,8 @@ body {
   /* background-image: url("https://c4.wallpaperflare.com/wallpaper/927/454/476/book-magic-glamour-spirituality-wallpaper-preview.jpg"); */
   background-image: url("https://images.unsplash.com/photo-1523681504355-8b4860f99a58?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHNvdWx8ZW58MHx8MHx8&w=1000&q=80");
   background-size: cover;
+
+  background-color: blue;
 }
 
 .App-logo {

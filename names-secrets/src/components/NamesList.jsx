@@ -17,7 +17,7 @@ export default function NamesList() {
   return (
     <div>
       <h1>Choose name</h1>
-        <ul class="list">
+        <ul className="list">
           {names.map((name) => {
             return (
               <li key={name.id} className='nameList'>

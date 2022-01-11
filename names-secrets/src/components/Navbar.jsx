@@ -7,7 +7,7 @@ export default function Navbar() {
       <Link className='navbarList' to="/" >Home page</Link>
       <Link className='navbarList' to="/names">List of names</Link>
       <Link className='navbarList' to="/new">Add a new name</Link>
-
+      <Link className='navbarList' to="/names/stars">Celebrities</Link>
     </div>
   )
 }

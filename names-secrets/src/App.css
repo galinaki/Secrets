@@ -87,3 +87,13 @@ p {
   bottom: 0;
   left: 0;
 }
+
+.starList {
+  position: relative;
+  text-align: center;
+}
+.starName {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}

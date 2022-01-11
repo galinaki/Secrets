@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { getStars } from '../services/apiConfig'
+import { Link } from 'react-router-dom'
 
 
 
@@ -29,6 +30,7 @@ export default function Stars() {
         )
         })}
       </ul>
+      <Link to="/names/stars/new">Add more famouse paople</Link>
     </div>
   )
 }

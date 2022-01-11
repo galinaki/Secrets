@@ -33,15 +33,15 @@ export const getNamesDetails = async () => {
 
 export const addNewName = async (fields) => {
   try {
-    await api.post("", { fields })
+    await api.post("/secrets/ ", { fields })
     return true
   } catch (error) {
     throw error
   }
 } 
 
-export const deleteName = async () => {
-  await api.delete()
+export const deleteName = async (id) => {
+  await api.delete(`/secrets/${id}`)
 }
 
 

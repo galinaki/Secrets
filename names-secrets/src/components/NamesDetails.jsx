@@ -34,7 +34,7 @@ export default function NamesDetails() {
       <button onClick={handleDelete} >Delete</button>
       <br />
       <br />
-      <Link to="/names/stars">Click here to see famouse people with this name</Link>
+      <Link to={`/names/stars/${name.fields?.name}`}>Click here to see famouse people with this name</Link>
     </div>
   )
 }

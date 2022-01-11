@@ -1,17 +1,24 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { getStars } from '../services/apiConfig'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
 
 
 export default function Stars() {
   const [stars, setStars] = useState([])
+  const { name } = useParams()
+  console.log(name)
 
   useEffect(() => {
     const fetchStars = async () => {
       console.log(await getStars())
-      setStars(await getStars())
+      const res = await getStars()
+      const sameName = res.filter(same => {
+        return same.fields.firstName === name 
+      })
+      console.log(sameName)
+      setStars(sameName)
     }
     fetchStars()
   }, [])
@@ -30,7 +37,7 @@ export default function Stars() {
         )
         })}
       </ul>
-      <Link to="/names/stars/new">Add more famouse paople</Link>
+      <Link to="/names/stars/new">Add more famouse people</Link>
     </div>
   )
 }

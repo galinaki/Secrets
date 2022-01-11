@@ -22,7 +22,8 @@ function App() {
         <Route path="/names" element={<NamesList />} />
         <Route path="/names/:id" element={<NamesDetails />} />
         <Route path="/new" element={<Form />} />
-        <Route path="/names/stars" element={<Stars />} />
+        <Route path="/names/stars/:name" element={<Stars />} />
+        <Route path="/names/stars" element={<h4>fffff</h4>} />
         <Route path="/names/stars/new" element={<AddStar />} />
       </Routes>
       <br />

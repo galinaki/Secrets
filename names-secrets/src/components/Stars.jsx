@@ -1,13 +1,15 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import { getStars } from '../services/apiConfig'
+import { getStars, getNamesDetails } from '../services/apiConfig'
 import { Link, useParams } from 'react-router-dom'
 
 
 
 export default function Stars() {
   const [stars, setStars] = useState([])
+  // const [name, setName] = useState({})
   const { name } = useParams()
+  
   console.log(name)
 
   useEffect(() => {
@@ -22,6 +24,18 @@ export default function Stars() {
     }
     fetchStars()
   }, [])
+
+  /////
+  // useEffect(() => {
+  //   const fetchNames = async () => {
+  //     const res = await getNamesDetails(`${id}`)
+  //     const detail=  res.records.find(record => {
+  //       return record.id === id
+  //     })
+  //       setName(detail)
+  //   }
+  //   fetchNames()
+  // }, [])
 
   return (
     <div>
@@ -38,6 +52,7 @@ export default function Stars() {
         })}
       </ul>
       <Link to="/names/stars/new">Add more famouse people</Link>
+      <Link to={`"/names/:id"`} >Back to name</Link>
     </div>
   )
 }

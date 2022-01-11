@@ -8,6 +8,7 @@ import Home from './components/Home';
 import Footer from './components/Footer';
 import Stars from './components/Stars';
 import AddStar from './components/AddStar';
+import AllStars from './components/AllStars';
 
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
         <Route path="/names/:id" element={<NamesDetails />} />
         <Route path="/new" element={<Form />} />
         <Route path="/names/stars/:name" element={<Stars />} />
-        <Route path="/names/stars" element={<h4>fffff</h4>} />
+        <Route path="/names/stars" element={<AllStars />} />
         <Route path="/names/stars/new" element={<AddStar />} />
       </Routes>
       <br />

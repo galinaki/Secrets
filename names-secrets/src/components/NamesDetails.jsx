@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
-import { deleteName, getNamesDetails } from '../services/apiConfig'
+import { Link, useParams, useNavigate } from 'react-router-dom'
+import { deleteName, getNamesDetails } from '../services/apiConfig' 
 
 export default function NamesDetails() {
   const [name, setName] = useState({})
-  const {id} = useParams()
+  const { id } = useParams()
+  const navigation = useNavigate()
 
   useEffect(() => {
     const fetchNames = async () => {
-      // console.log(getNamesDetails())
       const res = await getNamesDetails(`${id}`)
       const detail=  res.records.find(record => {
         return record.id === id
@@ -20,6 +20,7 @@ export default function NamesDetails() {
 
   const handleDelete = async () => {
     await deleteName(`${id}`)
+    navigation("/names")
   }
 
   return (

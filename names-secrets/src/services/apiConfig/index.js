@@ -47,9 +47,18 @@ export const deleteName = async (id) => {
 
 export const getStars = async () => {
   try {
-    const res = await api.get("/stars")
+    const res = await api.get("/stars/?sort%5B0%5D%5Bfield%5D=firstName")
     return res.data.records
   } catch (error) {
     throw error
   }
 }
+
+export const addStars = async (fields) => {
+  try {
+    await api.post("/stars/ ", { fields })
+    return true
+  } catch (error) {
+    throw error
+  }
+} 

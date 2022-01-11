@@ -5,8 +5,7 @@ const BASE = process.env.REACT_APP_AIRTABLE_BASE
 const KEY = process.env.REACT_APP_AIRTABLE_KEY
 
 const baseURL = `https://api.airtable.com/v0/${BASE}/secrets/`
-
-// const {id} = useParams()
+const secondURL = `https://api.airtable.com/v0/${BASE}/stars/`
 
 const api = axios.create({
   baseURL,
@@ -14,8 +13,6 @@ const api = axios.create({
     "Authorization": `Bearer ${KEY}`
   }
 })
-
-// export default api
 
 export const getNames = async () => {
   try {
@@ -26,12 +23,10 @@ export const getNames = async () => {
   }
 }
 
-
-
 export const getNamesDetails = async () => {
   try {
     const res = await api.get()
-    console.log(res.data)
+    // console.log(res.data)
     return res.data
     
   } catch (error) {
@@ -48,13 +43,22 @@ export const addNewName = async (fields) => {
   }
 } 
 
-// export const deleteName = async () => {
-//   try {
-//     const res = await api.delete()
-//     console.log(res.data)
-//     return res.data
-    
-//   } catch (error) {
-//     throw error
-//   }
-// }
+export const deleteName = async () => {
+  await api.delete()
+}
+/////////
+const api2 = axios.create({
+  secondURL,
+  headers: {
+    "Authorization": `Bearer ${KEY}`
+  }
+})
+
+export const fetchStars = async () => {
+  try {
+    const res = await api2.get("?sort%5B0%5D%5Bfield%5D=name")
+    return res.data.records
+  } catch (error) {
+    throw error
+  }
+}

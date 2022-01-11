@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import {  getNamesDetails } from '../services/apiConfig'
+import { deleteName, getNamesDetails } from '../services/apiConfig'
 
 export default function NamesDetails() {
   const [name, setName] = useState({})
@@ -18,11 +18,9 @@ export default function NamesDetails() {
     fetchNames()
   }, [])
 
-  // const handleDelete = async () => {
-  //   const del = await deleteName(`${id}`)
-  //   const delName = del.data.filter((rem) => name.id !== id)
-  //   setName(delName)
-  // }
+  const handleDelete = async () => {
+    await deleteName(`${id}`)
+  }
 
   return (
     <div>
@@ -33,7 +31,10 @@ export default function NamesDetails() {
       <Link to="/names">Back to list</Link>
       <br />
       <br />
-      {/* <button onClick={()=>handleDelete(name.id)} >Delete</button> */}
+      <button onClick={handleDelete} >Delete</button>
+      <br />
+      <br />
+      <Link to="/names/:id/stars">Click here to see famouse people with this name</Link>
     </div>
   )
 }

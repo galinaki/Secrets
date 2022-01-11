@@ -6,6 +6,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Footer from './components/Footer';
+import Stars from './components/Stars';
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
         <Route path="/names" element={<NamesList />} />
         <Route path="/names/:id" element={<NamesDetails />} />
         <Route path="/new" element={<Form />} />
-        <Route path="/names/stars" element={<h4>Famous people</h4>} />
+        <Route path="/names/:id/stars" element={<Stars />} />
         <Route path="/names/stars/new" element={<h4>Add a celebrity</h4>} />
       </Routes>
       <br />

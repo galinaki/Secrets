@@ -1,22 +1,29 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
-import { getNames } from '../services/apiConfig'
+import { Link, useParams } from 'react-router-dom'
+import { getNames, getNamesDetails } from '../services/apiConfig'
 
 export default function NameByLetter() {
   const [names, setNames] = useState([])
+  
+  const {letter} =useParams()
 
   useEffect(() => {
     const fetchNames = async () => {
-      console.log(getNames())
-      setNames(await getNames())
+      const res = await getNames()
+      const firstLetter = res.filter(first => {
+        return first.fields.name.charAt(0) == letter
+      })
+      setNames(firstLetter)
     }
     fetchNames()
   }, [])
 
 
+
+
   return (
     <div className="compDiv">
-      <h1>Choose name</h1>
+      {/* <h1>Names on Letter {names.charAt(0)}</h1> */}
         <ul className="list">
           {names.map((name) => {
             return (

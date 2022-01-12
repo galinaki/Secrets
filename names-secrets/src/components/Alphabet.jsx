@@ -17,25 +17,18 @@ export default function Alphabet() {
 
 
   return (
-    // <div>
-    //   {names.map((name) => {
-    //     return (
-    //       <Link to="/namesByLetter/:letter">{name.fields.name.charAt(0)}</Link>
-    //     )
-    //   })}
-    // </div>
-
     <div className="compDiv">
     <h1>Choose name</h1>
       <ul className="list">
         {names.map((name) => {
+          if(name.fields.name.charAt(0)!=="G"){
           return (
             <li key={name.id} className='nameList'>
               <Link className='linkNamesList' to={`/namesByLetter/${name.fields.name.charAt(0)}`}>
                 {name.fields.name.charAt(0)}
               </Link>
             </li>
-          )
+          )}
         })}
       </ul>
   </div>

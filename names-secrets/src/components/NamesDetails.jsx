@@ -24,7 +24,7 @@ export default function NamesDetails() {
   }
 
   return (
-    <div>
+    <div className="compDiv">
       <h1>{name.fields?.name}</h1>
       <h3>{name.fields?.pronunciation}</h3>
       <h2>{ name.fields?.meaning}</h2>

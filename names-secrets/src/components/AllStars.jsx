@@ -19,15 +19,15 @@ export default function AllStars() {
   
 
   return (
-    <div>
+    <div className='compDiv'>
       <h1>Starsssss </h1>
       <ul className='list2'>
       {stars.map((star) => {
         return (
           <li className='starList' key={star.id}>
-            <img className='starName' style={{width:"150px"}, {height: "150px"}} src={star.fields.image} />
-            <h2 className='starName'>{star.fields.firstName} {star.fields.lastName}</h2>
-            <h3 className='starName'>{star.fields.about}</h3>
+            <img className='starImage' src={star.fields.image} />
+            <h2 >{star.fields.firstName} {star.fields.lastName}</h2>
+            <h3 >{star.fields.about}</h3>
           </li>
         )
         })}

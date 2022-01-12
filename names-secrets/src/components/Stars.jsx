@@ -21,10 +21,10 @@ export default function Stars() {
     fetchStars()
   }, [])
 
-  // const handleDelete = async () => {
-  //   await deleteStar(`${id}`)
-  //   console.log(deleteStar(`${star.id}`))
-  //   }
+  const handleDelete = async (id) => {
+    await deleteStar(id)
+    // console.log(deleteStar(`${id}`))
+    }
 
   /////
   useEffect(() => {
@@ -40,17 +40,17 @@ export default function Stars() {
   ///////
 
   return (
-    <div>
+    <div className="compDiv">
       <ul className='list2'>
       {stars.map((star) => {
         return (
           <li className='starList' key={star.id}>
-            <img style={{ width: "150px" }, { height: "150px" }} src={star.fields.image}
+            <img className='starImage' src={star.fields.image}
               alt={`${ star.fields.firstName },${star.fields.lastName}`}/>
             <h2>{star.fields.firstName} {star.fields.lastName}</h2>
             <h3>{star.fields.about}</h3>
-            {/* <h2> {star.id}</h2> */}
-            {/* <button className='link' onClick={handleDelete} >Delete</button> */}
+            <h2> {star.id}</h2>
+            <button id="deleteStar" className='link' onClick={()=>handleDelete(star.id) } >Delete</button>
           </li>
         )
         })}

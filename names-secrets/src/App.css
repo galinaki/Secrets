@@ -66,14 +66,15 @@ h3 {
 }
 p {
   font-size: 30px;
-  animation: pulse 9s infinite;
+  animation: pulse 6s infinite;
+  margin: 150px;
 }
 @keyframes pulse {
   0% {
     color: #001f3f;
   }
   100% {
-    color: #5456c5;
+    color: #4b450f;
   }
 }
 
@@ -107,6 +108,11 @@ p {
   bottom: 0;
   left: 0;
 }
+#linkedin,
+#github {
+  width: 25px;
+  margin: 0 5px;
+}
 .list2 {
   display: flex;
   flex-direction: row;
@@ -131,6 +137,9 @@ p {
   border-radius: 35px;
   padding: 15px;
   margin: 5px 5px;
+}
+.starImage {
+  height: 150px;
 }
 .input {
   width: 250px;
@@ -170,4 +179,64 @@ p {
 .submit {
   border-radius: 35px;
   color: darkred;
+}
+
+@media only screen and (max-width: 600px) {
+  #title {
+    font-size: 27px;
+  }
+  h1 {
+    font-size: 22px;
+  }
+  h2 {
+    font-size: 19px;
+  }
+  h3 {
+    font-size: 14px;
+  }
+  p {
+    font-size: 18px;
+    background-color: rgb(255, 235, 204, 0.7);
+    border-radius: 35px;
+    padding: 15px 15px;
+    margin: 90px 10px 0 10px;
+  }
+  .navbarList {
+    font-size: 16px;
+  }
+  #copyright {
+    font-size: 10px;
+  }
+  #linkedin,
+  #github {
+    width: 15px;
+    margin: 2px 5px;
+  }
+  .list {
+    font-size: 21px;
+  }
+  .nameList {
+    margin: 5px 5px;
+  }
+  .form {
+    font-family: 18px;
+    max-width: min-content;
+    margin-top: 70px;
+    padding: 5px;
+  }
+  .starList {
+    font-size: 5px;
+  }
+  .link {
+    font-size: 13px;
+  }
+  .compDiv {
+    margin-top: 80px;
+  }
+  #deleteStar {
+    opacity: 0.3;
+  }
+  .starImage {
+    height: 100px;
+  }
 }

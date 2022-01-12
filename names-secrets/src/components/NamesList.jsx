@@ -15,7 +15,7 @@ export default function NamesList() {
 
 
   return (
-    <div>
+    <div className="compDiv">
       <h1>Choose name</h1>
         <ul className="list">
           {names.map((name) => {

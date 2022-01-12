@@ -16,6 +16,8 @@ export default function AllStars() {
     fetchStars()
   }, [])
 
+  
+
   return (
     <div>
       <h1>Starsssss </h1>

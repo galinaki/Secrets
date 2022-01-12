@@ -66,6 +66,15 @@ h3 {
 }
 p {
   font-size: 30px;
+  animation: pulse 9s infinite;
+}
+@keyframes pulse {
+  0% {
+    color: #001f3f;
+  }
+  100% {
+    color: #5456c5;
+  }
 }
 
 .navbarList {

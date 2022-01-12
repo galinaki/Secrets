@@ -1,6 +1,7 @@
 import React from 'react'
+import axios from 'axios'
 import { useState, useEffect } from 'react'
-import { getStars, getNamesDetails } from '../services/apiConfig'
+import { getStars, getNamesDetails, deleteStar } from '../services/apiConfig'
 import { Link, useParams } from 'react-router-dom'
 
 export default function Stars() {
@@ -8,20 +9,22 @@ export default function Stars() {
   const [person, setPerson] = useState({})
   const { name } = useParams()
   
-  console.log(name)
 
   useEffect(() => {
     const fetchStars = async () => {
-      console.log(await getStars())
       const res = await getStars()
       const sameName = res.filter(same => {
         return same.fields.firstName === name 
       })
-      console.log(sameName)
       setStars(sameName)
     }
     fetchStars()
   }, [])
+
+  // const handleDelete = async () => {
+  //   await deleteStar(`${id}`)
+  //   console.log(deleteStar(`${star.id}`))
+  //   }
 
   /////
   useEffect(() => {
@@ -46,12 +49,15 @@ export default function Stars() {
               alt={`${ star.fields.firstName },${star.fields.lastName}`}/>
             <h2>{star.fields.firstName} {star.fields.lastName}</h2>
             <h3>{star.fields.about}</h3>
+            {/* <h2> {star.id}</h2> */}
+            {/* <button className='link' onClick={handleDelete} >Delete</button> */}
           </li>
         )
         })}
       </ul>
       <Link className='link' to="/names/stars/new">Add more famouse people</Link>
       <Link className='link' to={`/names/${person.id}`} >Back to name</Link>
+      
     </div>
   )
 }

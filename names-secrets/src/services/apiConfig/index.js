@@ -62,3 +62,7 @@ export const addStars = async (fields) => {
     throw error
   }
 } 
+
+export const deleteStar = async (id) => {
+  await api.delete(`/stars/${id}`)
+}

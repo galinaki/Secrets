@@ -27,30 +27,33 @@ export default function AddStar() {
   }
 
   return (
-    <div>
-      <h2>Add a famous person with same name as yours</h2>
+    <div className='form'>
+      <h2>Add a famous person
+        <br /> with same name as yours</h2>
       <form onSubmit={handleSubmit}>
         <label>First name</label>
         <br />
-        <input type="text" placeholder='type first name'
+        <input className='input' type="text" placeholder='type first name'
         id='firstName' value={newStar.firstName} onChange={handleInput} />
         <br />
         <label>Last name</label>
         <br />
-        <input type="text" placeholder='type last name'
+        <input className='input' type="text" placeholder='type last name'
         id='lastName' value={newStar.lastName} onChange={handleInput} />
         <br />
         <label>Info</label>
         <br />
-        <textarea type="text" placeholder='tell us about this person'
-          rows={8} id='about' value={newStar.about} onChange={handleInput} />
+        <textarea className='input' type="text" placeholder='tell us about this person'
+          id='about' value={newStar.about}
+          onChange={handleInput} style={{ height: "100px" }}
+          rows="4"/>
         <br />
         <label>Photo</label>
         <br />
-        <input type="text" placeholder='past link of photo'
+        <input className='input' type="text" placeholder='past link of photo'
         id='image' value={newStar.image} onChange={handleInput} />
         <br /><br />
-        <button>Submit</button>
+        <button className="submit">Submit</button>
       </form>
     </div>
   )

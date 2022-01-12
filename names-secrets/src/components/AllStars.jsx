@@ -19,18 +19,18 @@ export default function AllStars() {
   return (
     <div>
       <h1>Starsssss </h1>
-      <ul>
+      <ul className='list2'>
       {stars.map((star) => {
         return (
           <li className='starList' key={star.id}>
-            <img style={{width:"150px"}, {height: "150px"}} src={star.fields.image} />
+            <img className='starName' style={{width:"150px"}, {height: "150px"}} src={star.fields.image} />
             <h2 className='starName'>{star.fields.firstName} {star.fields.lastName}</h2>
-            <h3>{star.fields.about}</h3>
+            <h3 className='starName'>{star.fields.about}</h3>
           </li>
         )
         })}
       </ul>
-      <Link to="/names/stars/new">Add more famouse people</Link>
+      <Link className='link' to="/names/stars/new">Add more famouse people</Link>
     </div>
   )
 }

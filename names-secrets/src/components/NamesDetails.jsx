@@ -29,13 +29,13 @@ export default function NamesDetails() {
       <h3>{name.fields?.pronunciation}</h3>
       <h2>{ name.fields?.meaning}</h2>
       <h2>{name.fields?.history}</h2>
-      <Link to="/names">Back to list</Link>
+      <br />
+      <Link className='link' to="/names">Back to list</Link>
       <br />
       <br />
-      <button onClick={handleDelete} >Delete</button>
-      <br />
-      <br />
-      <Link to={`/names/stars/${name.fields?.name}`}>Click here to see famouse people with this name</Link>
+      <Link className='link' to={`/names/stars/${name.fields?.name}`}>Click here to see famouse people with this name</Link>
+      <button id="delete" className='link' onClick={handleDelete} >Delete</button>
+      
     </div>
   )
 }

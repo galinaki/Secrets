@@ -21,7 +21,7 @@ export default function NamesList() {
           {names.map((name) => {
             return (
               <li key={name.id} className='nameList'>
-                <Link className='linkNameList' to={`/names/${name.id}`}>
+                <Link className='linkNamesList' to={`/names/${name.id}`}>
                   {name.fields.name}
                 </Link>
               </li>

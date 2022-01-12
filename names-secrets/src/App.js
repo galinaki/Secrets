@@ -13,11 +13,10 @@ import AllStars from './components/AllStars';
 function App() {
   return (
     <div className="App">
-      <h1>Name's secrets</h1>
+      <h1 id="title">Name's secrets</h1>
       <Navbar />
       <br />
       <br />
-      <br/>
       <Routes>
         <Route path="/" element={<Home />} />  
         <Route path="/names" element={<NamesList />} />

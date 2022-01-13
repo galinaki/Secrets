@@ -8,12 +8,13 @@ export default function Search() {
 
   useEffect(() => {
     const fetchNames = async () => {
-      console.log(getNames())
       setNames(await getNames())
-      console.log(names)
     }
     fetchNames()
   }, [])
+
+  // name = input.value
+  // names.filter(oneNAme=>oneNAme.name===name)
 
   const search = (names) => {
     return names.filter(name=>name.fields.name.toLowerCase().indexOf(searchInput)>-1)
@@ -27,6 +28,7 @@ export default function Search() {
         placeholder='Search by name, just type'
       onChange={(e)=>setSearchInput(e.target.value)} />
       <button>Find</button>
+      <br />
       <br />
       Name here
     </div>

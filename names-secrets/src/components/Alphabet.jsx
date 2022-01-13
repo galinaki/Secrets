@@ -8,23 +8,28 @@ export default function Alphabet() {
 
   useEffect(() => {
     const fetchNames = async () => {
-      await getNames()
-      setNames(getNames())
       // console.log(getNames())
+      setNames(await getNames())
     }
     fetchNames()
   }, [])
 
-
+  const unique = names.map((n) => {
+    return n.fields.name.charAt(0)
+  }).map((n, i, final) => final.indexOf(n) === i && i).filter(n=>names[n]).map(n=>names[n])
+    // .indexOf(n === id)
+      // 
+  console.log(unique)
 
   return (
     <div className="compDiv">
-    <h1>Choose name</h1>
+      <h1>Choose name</h1>
+      {/* <Link to={`/namesByLetter/${G}`}>G</Link> */}
       <ul className="list">
-        {names.filter((value, index)=>names.indexOf(value)===index)}
+        
 
         
-        {/* {names.map((name) => {
+        {unique.map((name) => {
           // if(name.fields.name.charAt(0)!=="G"){
           return (
             <li key={name.id} className='nameList'>
@@ -33,9 +38,10 @@ export default function Alphabet() {
               </Link>
             </li>
           )
-        // }
-        })} */}
+        }
+        )}
       </ul>
+      
   </div>
   )
 }

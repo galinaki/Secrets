@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import { getNames } from '../services/apiConfig'
 import NamesList from './NamesList'
+import { Link } from 'react-router-dom'
 
 export default function Search() {
   const [names, setNames] = useState([])
-  const [searchInput, setSearchInput] = useState([])
+  const [searchInput, setSearchInput] = useState("")
+  const [searchResults, setSearchResults] = useState([])
 
   useEffect(() => {
     const fetchNames = async () => {
@@ -13,24 +15,27 @@ export default function Search() {
     fetchNames()
   }, [])
 
-  // name = input.value
-  // names.filter(oneNAme=>oneNAme.name===name)
-
-  const search = (names) => {
-    return names.filter(name=>name.fields.name.toLowerCase().indexOf(searchInput)>-1)
-    }
-
-  
+  const search = (e) => {
+    setSearchInput(e.target.value)
+    setSearchResults(names.filter(n => n.fields.name.includes(e.target.value)))
+  }
 
   return (
-    <div>
-      <input className='search' type="text" value={searchInput}
+    <div className="compDiv">
+      <input className='input' type="text" value={searchInput}
         placeholder='Search by name, just type'
-      onChange={(e)=>setSearchInput(e.target.value)} />
-      <button>Find</button>
+      onChange={(e)=>search(e)} />
       <br />
       <br />
-      Name here
+      <ul className="list">
+        {searchResults.map(result => {
+          return (
+            <li  key={result.id} className='nameList'>
+              <Link  className='linkNamesList' to={`/names/${result.id}`}>{ result.fields.name}</Link>
+            </li>
+          )
+        })}
+      </ul>
     </div>
   )
 

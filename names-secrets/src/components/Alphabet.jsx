@@ -8,8 +8,9 @@ export default function Alphabet() {
 
   useEffect(() => {
     const fetchNames = async () => {
-      console.log(getNames())
-      setNames(await getNames())
+      await getNames()
+      setNames(getNames())
+      // console.log(getNames())
     }
     fetchNames()
   }, [])
@@ -20,7 +21,10 @@ export default function Alphabet() {
     <div className="compDiv">
     <h1>Choose name</h1>
       <ul className="list">
-        {names.map((name) => {
+        {names.filter((value, index)=>names.indexOf(value)===index)}
+
+        
+        {/* {names.map((name) => {
           // if(name.fields.name.charAt(0)!=="G"){
           return (
             <li key={name.id} className='nameList'>
@@ -30,7 +34,7 @@ export default function Alphabet() {
             </li>
           )
         // }
-        })}
+        })} */}
       </ul>
   </div>
   )

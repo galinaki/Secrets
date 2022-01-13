@@ -44,6 +44,21 @@ export const deleteName = async (id) => {
   await api.delete(`/secrets/${id}`)
 }
 
+// export const Search = async() => {
+  
+// }
+
+// export const getAlphabet = async () => {
+//   try {
+//     const res = await api.get("/secrets/?sort%5B0%5D%5Bfield%5D=name")
+//     const array = res.data.records
+//     console.log(array)
+//     return array.map
+//   } catch (error) {
+//     throw error
+//   }
+// }
+
 
 export const getStars = async () => {
   try {

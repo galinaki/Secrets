@@ -11,6 +11,7 @@ import AddStar from './components/AddStar';
 import AllStars from './components/AllStars';
 import Alphabet from './components/Alphabet';
 import NameByLetter from './components/NameByLetter';
+import Search from './components/Search';
 
 function App() {
   return (
@@ -18,8 +19,10 @@ function App() {
       <h1 id="title">Name's secrets</h1>
       <Navbar />
       <br />
+      {/* <Search /> */}
       <br />
       <Routes>
+        <Route path="/search" element={<Search />} />
         <Route path="/" element={<Home />} />  
         <Route path="/names" element={<NamesList />} />
         <Route path="/names/:id" element={<NamesDetails />} />

@@ -92,9 +92,15 @@ p {
   flex-direction: column;
   flex-wrap: nowrap;
   align-items: flex-start;
+  left: 2%;
+  margin-top: 5%;
+}
+.menuIcon {
+  position: absolute;
+  left: 4%;
 }
 .compDiv {
-  margin-top: 120px;
+  margin-top: 18%;
 }
 
 .form {

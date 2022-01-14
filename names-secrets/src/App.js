@@ -3,7 +3,6 @@ import './App.css';
 import NamesList from "./components/NamesList"
 import NamesDetails from "./components/NamesDetails"
 import Form from "./components/Form"
-import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Footer from './components/Footer';
 import Stars from './components/Stars';
@@ -12,12 +11,13 @@ import AllStars from './components/AllStars';
 import NameByLetter from './components/NameByLetter';
 import Alphabet from './components/Alphabet';
 import Search from './components/Search';
+import Menu from './components/Menu';
 
 function App() {
   return (
     <div className="App">
       <h1 id="title">Name's secrets</h1>
-      <Navbar />
+      <Menu />
       <br />
       <br />
       <Routes>

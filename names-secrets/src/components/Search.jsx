@@ -17,15 +17,16 @@ export default function Search() {
   const search = (e) => {
     e.preventDefault()
     setSearchInput(e.target.value)
-     setSearchResults(names.filter(n => n.fields.name.toLowerCase().includes(e.target.value.toLowerCase())))
+    setSearchResults(names.filter(n => n.fields.name.toLowerCase().includes(e.target.value.toLowerCase())))
   }
 
   return (
+    
     <div className="compDiv">
       <h1>Search name</h1>
       <input className='input' id="search" type="text" value={searchInput} placeholder='Type name' onChange={(e)=>search(e)} />
       <br />
-      <ul className="list">
+      {searchInput ? <ul className="list">
         {searchResults.map(result => {
           return (
             <li  key={result.id} className='nameList'>
@@ -33,7 +34,7 @@ export default function Search() {
             </li>
           )
         })}
-      </ul>
+      </ul> : <h4></h4> }
     </div>
   )
 }

@@ -12,12 +12,14 @@ import NameByLetter from './components/NameByLetter';
 import Alphabet from './components/Alphabet';
 import Search from './components/Search';
 import Menu from './components/Menu';
+import MenuMobile from './components/MenuMobile';
 
 function App() {
   return (
     <div className="App">
       <h1 id="title">Name's secrets</h1>
       <Menu />
+      <MenuMobile />
       <br />
       <br />
       <Routes>

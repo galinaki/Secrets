@@ -10,7 +10,7 @@ export default function NamesDetails() {
   useEffect(() => {
     const fetchNames = async () => {
       const res = await getNamesDetails(`${id}`)
-      const detail=  res.records.find(record => {
+      const detail = res.records.find(record => {
         return record.id === id
       })
         setName(detail)
@@ -35,7 +35,6 @@ export default function NamesDetails() {
       <br />
       <Link className='link' to={`/names/stars/${name.fields?.name}`}>Click here to see famouse people with this name</Link>
       <button id="delete" className='link' onClick={handleDelete} >Delete</button>
-      
     </div>
   )
 }

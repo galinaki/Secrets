@@ -44,9 +44,6 @@ export const deleteName = async (id) => {
   await api.delete(`/secrets/${id}`)
 }
 
-// export const Search = async() => {
-  
-// }
 
 
 

@@ -3,8 +3,6 @@ import { getStars } from '../services/apiConfig'
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
-
-
 export default function AllStars() {
   const [stars, setStars] = useState([])
 
@@ -15,8 +13,6 @@ export default function AllStars() {
     }
     fetchStars()
   }, [])
-
-  
 
   return (
     <div className='compDiv'>

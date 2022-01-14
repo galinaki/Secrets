@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { getNames, getNamesDetails } from '../services/apiConfig'
+import { getNames } from '../services/apiConfig'
 
 export default function NameByLetter() {
   const [names, setNames] = useState([])
@@ -17,9 +17,6 @@ export default function NameByLetter() {
     }
     fetchNames()
   }, [])
-
-
-
 
   return (
     <div className="compDiv">

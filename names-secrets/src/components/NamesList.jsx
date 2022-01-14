@@ -13,9 +13,8 @@ export default function NamesList() {
     fetchNames()
   }, [])
 
-
   return (
-    <div id="chooseName">
+    <div className="compDiv">
       <h1>Choose name</h1>
         <ul className="list">
           {names.map((name) => {

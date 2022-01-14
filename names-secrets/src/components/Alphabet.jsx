@@ -8,7 +8,6 @@ export default function Alphabet() {
 
   useEffect(() => {
     const fetchNames = async () => {
-      // console.log(getNames())
       setNames(await getNames())
     }
     fetchNames()
@@ -17,31 +16,21 @@ export default function Alphabet() {
   const unique = names.map((n) => {
     return n.fields.name.charAt(0)
   }).map((n, i, final) => final.indexOf(n) === i && i).filter(n=>names[n]).map(n=>names[n])
-    // .indexOf(n === id)
-      // 
-  console.log(unique)
 
   return (
     <div className="compDiv">
-      <h1>Choose name</h1>
-      {/* <Link to={`/namesByLetter/${G}`}>G</Link> */}
-      <ul className="list">
-        
-
-        
-        {unique.map((name) => {
-          // if(name.fields.name.charAt(0)!=="G"){
-          return (
-            <li key={name.id} className='nameList'>
-              <Link className='linkNamesList' to={`/namesByLetter/${name.fields.name.charAt(0)}`}>
-                {name.fields.name.charAt(0)}
-              </Link>
-            </li>
-          )
-        }
-        )}
-      </ul>
-      
+      <h1>Starts with:</h1>
+        <ul className="list">
+          {unique.map((name) => {
+            return (
+              <li key={name.id} className='nameList'>
+                <Link className='linkNamesList' to={`/namesByLetter/${name.fields.name.charAt(0)}`}>
+                  {name.fields.name.charAt(0)}
+                </Link>
+              </li>
+            )
+          })}
+        </ul>
   </div>
   )
 }

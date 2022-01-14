@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { getNames } from '../services/apiConfig'
-import NamesList from './NamesList'
 import { Link } from 'react-router-dom'
 
 export default function Search() {
@@ -17,15 +16,13 @@ export default function Search() {
 
   const search = (e) => {
     setSearchInput(e.target.value)
-    setSearchResults(names.filter(n => n.fields.name.includes(e.target.value)))
+    setSearchResults(names.filter(n => n.fields.name.toLowerCase().includes(e.target.value)))
   }
 
   return (
     <div className="compDiv">
-      <input className='input' type="text" value={searchInput}
-        placeholder='Search by name, just type'
-      onChange={(e)=>search(e)} />
-      <br />
+      <h1>Search name</h1>
+      <input className='input' id="search" type="text" value={searchInput} placeholder='Type name' onChange={(e)=>search(e)} />
       <br />
       <ul className="list">
         {searchResults.map(result => {
@@ -38,6 +35,4 @@ export default function Search() {
       </ul>
     </div>
   )
-
-
 }

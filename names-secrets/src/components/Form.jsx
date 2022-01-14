@@ -31,30 +31,19 @@ export default function Form() {
       <form onSubmit={handleSubmit} >
         <label>Name</label>
         <br />
-        <input input className='input' type="text" placeholder='type name'
-        value={newName.name} id="name"
-        onChange={handleInput} />
+        <input input className='input' type="text" placeholder='type name' value={newName.name} id="name" onChange={handleInput} />
         <br />
         <label>Pronunciation </label>
         <br />
-        <input input className='input' type="text" placeholder='how to pronunce?' 
-          value={newName.pronunciation} id='pronunciation'
-          value={newName.pronunciation}
-        onChange={handleInput} />
+        <input input className='input' type="text" placeholder='how to pronunce?' value={newName.pronunciation} id='pronunciation' value={newName.pronunciation} onChange={handleInput} />
         <br />
         <label>Meaning </label>
         <br />
-        <input input className='input' type="text" placeholder='what is name meaning?'
-          onChange={handleInput} id='meaning'
-          value={newName.meaning}/>
+        <input input className='input' type="text" placeholder='what is name meaning?' onChange={handleInput} id='meaning' value={newName.meaning}/>
         <br />
         <label>History of name </label>
         <br />
-        <textarea input className='input' rows="5" placeholder='little bit of history'
-          onChange={handleInput} id='history'
-          value={newName.history}
-          style={{ height: "100px" }} rows="4"
-           />
+        <textarea input className='input' rows="5" placeholder='little bit of history' onChange={handleInput} id='history' value={newName.history} style={{ height: "100px" }} rows="4" />
         <br />
         <br />
         <button className="submit" >Submit</button>

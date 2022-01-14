@@ -15,8 +15,9 @@ export default function Search() {
   }, [])
 
   const search = (e) => {
+    e.preventDefault()
     setSearchInput(e.target.value)
-    setSearchResults(names.filter(n => n.fields.name.toLowerCase().includes(e.target.value)))
+     setSearchResults(names.filter(n => n.fields.name.toLowerCase().includes(e.target.value.toLowerCase())))
   }
 
   return (

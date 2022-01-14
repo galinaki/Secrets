@@ -8,7 +8,7 @@ export default function MenuMobile() {
 
   const openIcon = <GiSundial  size="50px" color='lightsalmon' onClick={() => setOpen(!open)} />
 
-  const closeIcon = <RiMoonClearFill className="menuIcon" size="40px" color='lightsalmon' onClick={() => setOpen(!open)} />
+  const closeIcon = <RiMoonClearFill className="menuIcon" size="50px" color='lightsalmon' onClick={() => setOpen(!open)} />
 
 const closeMenuMobile = () =>setOpen(false)
 

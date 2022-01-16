@@ -21,6 +21,7 @@ export default function Stars() {
 
   const handleDelete = async (id) => {
     await deleteStar(id)
+    window.location.reload(false)
   }
 
   useEffect(() => {
@@ -43,7 +44,6 @@ export default function Stars() {
               <img className='starImage' src={star.fields.image} alt={`${ star.fields.firstName },${star.fields.lastName}`}/>
               <h2>{star.fields.firstName} {star.fields.lastName}</h2>
               <h3>{star.fields.about}</h3>
-              <h2> {star.id}</h2>
               <button id="deleteStar" className='link' onClick={()=>handleDelete(star.id) } >Delete</button>
             </li>
           )

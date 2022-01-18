@@ -21,7 +21,7 @@ export default function AllStars() {
       {stars.map((star) => {
         return (
           <li className='starList' key={star.id}>
-            <img className='starImage' src={star.fields.image} />
+            <img className='starImage' src={star.fields.image} alt={star.fields.lastName} />
             <h2 >{star.fields.firstName} {star.fields.lastName}</h2>
             <h3 >{star.fields.about}</h3>
           </li>

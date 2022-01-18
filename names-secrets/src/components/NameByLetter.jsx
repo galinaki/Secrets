@@ -20,7 +20,6 @@ export default function NameByLetter() {
 
   return (
     <div className="compDiv">
-     
         <ul className="list">
           {names.map((name) => {
             return (

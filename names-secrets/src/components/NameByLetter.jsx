@@ -11,7 +11,7 @@ export default function NameByLetter() {
     const fetchNames = async () => {
       const res = await getNames()
       const firstLetter = res.filter(first => {
-        return first.fields.name.charAt(0) == letter
+        return first.fields.name.charAt(0) === letter
       })
       setNames(firstLetter)
     }
@@ -20,7 +20,7 @@ export default function NameByLetter() {
 
   return (
     <div className="compDiv">
-      {/* <h1>Names on Letter {names.charAt(0)}</h1> */}
+     
         <ul className="list">
           {names.map((name) => {
             return (

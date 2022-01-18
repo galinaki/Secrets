@@ -34,7 +34,7 @@ export default function Search() {
             </li>
           )
         })}
-      </ul> : <h4></h4> }
+      </ul> : <h4>Type name</h4> }
     </div>
   )
 }

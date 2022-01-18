@@ -17,7 +17,7 @@ export default function Stars() {
       setStars(sameName)
     }
     fetchStars()
-  }, [])
+  }, [name])
 
   const handleDelete = async (id) => {
     await deleteStar(id)
@@ -33,7 +33,7 @@ export default function Stars() {
       setPerson(detail)
     }
     fetchNames()
-  }, [])
+  }, [name])
 
   return (
     <div className="compDiv">

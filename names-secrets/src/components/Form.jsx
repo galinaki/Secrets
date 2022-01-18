@@ -43,7 +43,7 @@ export default function Form() {
         <br />
         <label>History of name </label>
         <br />
-        <textarea className='input' rows="5" placeholder='little bit of history' onChange={handleInput} id='history' value={newName.history} style={{ height: "100px" }} rows="4" />
+        <textarea className='input' placeholder='little bit of history' onChange={handleInput} id='history' value={newName.history} style={{ height: "100px" }} rows="4" />
         <br />
         <br />
         <button className="submit" >Submit</button>

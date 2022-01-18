@@ -16,7 +16,7 @@ export default function NameByLetter() {
       setNames(firstLetter)
     }
     fetchNames()
-  }, [])
+  }, [letter])
 
   return (
     <div className="compDiv">

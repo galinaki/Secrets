@@ -16,7 +16,7 @@ export default function NamesDetails() {
         setName(detail)
     }
     fetchNames()
-  }, [])
+  }, [id])
 
   const handleDelete = async () => {
     await deleteName(`${id}`)

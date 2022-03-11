@@ -58,12 +58,12 @@ Click [here](https://whimsical.com/embed/TajS5gQaKGMY3FybDRehe4) to go to my Wir
 | Day       | Deliverable                                                      | Status     |
 | --------- | ---------------------------------------------------------------- | ---------- |
 | Jan 8-9   | Prompt / Wireframes / Priority Matrix / Timeframes               | Completed  |
-| Jan 10    | Project Approval                                                 | Incomplete |
-| Jan 11-12 | Core Application Structure (React components, Airtable and etc ) | Incomplete |
-| Jan 13    | Pseudocode / actual code                                         | Incomplete |
-| Jan 14    | Initial Clickable Model                                          | Incomplete |
-| Jan 15-17 | MVP                                                              | Incomplete |
-| Jan 18    | Presentations                                                    | Incomplete |
+| Jan 10    | Project Approval                                                 | Completed |
+| Jan 11-12 | Core Application Structure (React components, Airtable and etc ) | Completed |
+| Jan 13    | Pseudocode / actual code                                         | Completed |
+| Jan 14    | Initial Clickable Model                                          | Completed |
+| Jan 15-17 | MVP                                                              | Completed |
+| Jan 18    | Presentations                                                    | Completed |
 
 ## Timeframes
 
